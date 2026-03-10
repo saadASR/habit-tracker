@@ -63,8 +63,8 @@ void main() async {
   final settings = HiveService.getSettings();
   AppColors.setTheme(settings.themeType);
 
-  // Seed sample data
-  await HiveService.seedSampleData();
+  // Note: Sample data seeding removed for fresh start
+  // To add sample data, uncomment: await HiveService.seedSampleData();
 
   runApp(const ProviderScope(child: HabitTrackerApp()));
 }
