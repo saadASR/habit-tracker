@@ -1,6 +1,6 @@
 # Habit Tracker - Premium Flutter App
 
-A production-ready, portfolio-worthy habit tracking application built with Flutter. This app demonstrates advanced UI engineering, fluid animations, clean architecture, and thoughtful UX design.
+A production-ready,Habit tracking application built with Flutter. This app demonstrates advanced UI engineering, fluid animations, clean architecture, and thoughtful UX design.
 
 ## Features
 
