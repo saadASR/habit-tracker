@@ -143,10 +143,3 @@ The app includes these key screens:
 - Weekly/monthly reports
 - Multi-language support
 
-## License
-
-MIT License - Feel free to use for learning or portfolio purposes.
-
-## Acknowledgments
-
-Built with Flutter - A UI toolkit for beautiful, natively compiled applications for mobile, web, and desktop from a single codebase.
