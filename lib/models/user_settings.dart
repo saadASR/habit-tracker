@@ -11,7 +11,7 @@ class UserSettings extends HiveObject {
   UserSettings({
     this.isDarkMode = false,
     this.hasCompletedOnboarding = false,
-    this.notificationsEnabled = true,
+    this.notificationsEnabled = false,
     this.defaultReminderTime,
     this.themeTypeIndex = 0,
   });

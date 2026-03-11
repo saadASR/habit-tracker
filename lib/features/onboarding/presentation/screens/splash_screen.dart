@@ -135,8 +135,8 @@ class _SplashScreenState extends State<SplashScreen>
                   opacity: _textOpacityAnimation,
                   child: Column(
                     children: [
-                      const Text(
-                        'Habit Tracker',
+                      Text(
+                        'Habit tracker',
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 32,

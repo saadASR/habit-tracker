@@ -87,7 +87,7 @@ class _HabitTrackerAppState extends ConsumerState<HabitTrackerApp> {
     final isDarkMode = ref.watch(themeProvider);
 
     return MaterialApp(
-      title: 'Habit Tracker',
+      title: 'Habit tracker',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,

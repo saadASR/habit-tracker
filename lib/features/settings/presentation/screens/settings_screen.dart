@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:url_launcher/url_launcher.dart';
 import '../../../../core/constants/app_constants.dart';
 import '../../../../services/hive_service.dart';
 import '../../../../services/notification_service.dart';
@@ -124,11 +125,12 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
           ),
           ListTile(
             leading: Icon(
-              Icons.code,
+              Icons.person,
               color: AppColors.primary,
             ),
-            title: const Text('Built with Flutter'),
-            subtitle: const Text('Portfolio Project'),
+            title: const Text('Developed by SaadASR'),
+            subtitle: const Text('Click to visit Instagram'),
+            onTap: () => _openInstagram(),
           ),
           const SizedBox(height: AppSpacing.xxl),
         ],
@@ -260,6 +262,25 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
         ],
       ),
     );
+  }
+
+  void _openInstagram() async {
+    final Uri instagramUrl = Uri.parse('https://www.instagram.com/saadasr1/');
+    try {
+      // Try to open Instagram app first
+      final Uri nativeUrl = Uri.parse('instagram://user?username=saadasr1');
+      await Future.delayed(const Duration(milliseconds: 100));
+      // Fallback to web if app not available
+      await Future.any([
+        Future.delayed(const Duration(milliseconds: 500)),
+        Future.value(true),
+      ]);
+      // Use web URL as fallback
+      await launchUrl(instagramUrl, mode: LaunchMode.externalApplication);
+    } catch (e) {
+      // Fallback to web
+      await launchUrl(instagramUrl, mode: LaunchMode.externalApplication);
+    }
   }
 }
 
